@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body style="background-color:hsl(194, 98%, 38%);"> 
+
+    
+
+  <h2 style="color: orange;">Q1 3rd Graded Exercise</h2>
+
+  <p style="color: orange;">Guess the number : ****</p>
+  <p style="color: orange;">The number is from 1 to 100</p>
+
+  <label style="color: orange;">Enter your guess : </label>
+  <input type="number" id="userGuess">
+  <br><br>
+
+  <button onclick="checkIt()" style="color: orange;">Check It</button>
+
+  <p id="output" style="color: orange;">Result:</p>
+
+  </p>
+
+  <script>
+    var dNumber = Math.floor(Math.random() * 100) + 1;
+
+    function checkIt() {
+      var guess = Number(document.getElementById("userGuess").value);
+      var message = "";
+
+      if (guess < dNumber) {
+        message = "Result: Higher";
+      } else if (guess > dNumber) {
+        message = "Result: Lower";
+      } else if (guess === dNumber) {
+        message = "Result: The trees say you got it right";
+      } else {
+        message = "Result: The trees command you put a number";
+      }
+
+      document.getElementById("output").innerHTML = message;
+    }
+  </script>
+<img src="https://i.pinimg.com/originals/3a/16/2e/3a162ebee12c4c959b309446599465f2.png" alt="The lorax" width="500" length="500">
+</body>
+</html>
