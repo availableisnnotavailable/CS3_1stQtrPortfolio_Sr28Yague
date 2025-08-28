@@ -9,7 +9,6 @@
 
   <button onclick="calculateTotal()"> calculateTotal </button>
 
-  <!-- ✅ FIXED: Combined "Total Meal:" with the result span -->
   <p style="color: orange;">Total Meal: <span id="totalOutput"></span></p>
 
   <img src="https://i.pinimg.com/originals/3a/16/2e/3a162ebee12c4c959b309446599465f2.png" alt="The lorax" width="500" length="500">
@@ -22,7 +21,6 @@
 
         let total = in1 + in2 + (in3 / 100 * in1);
 
-        // ✅ FIXED: Output shown inside the span next to "Total Meal:"
         document.getElementById("totalOutput").innerHTML = "Php " + total.toFixed(2);
     }
   </script>
